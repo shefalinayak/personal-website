@@ -3,15 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Shefali Nayak</title>
+<script src="gradient.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Coda|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+#gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+main {
+	position: absolute;
+	z-index: 0;
+}
+</style>
+<script>
+
+</script>
 </head>
 
-<body>
+<body onload="init()" onresize="resize()">
+	<canvas id="gradient">
+	</canvas>
 	<header>
 		<nav>
 			<a href="index.html">Home</a>
-			<a href="">Blog</a>
 			<a href="underconstruction.html">Projects</a>
 		</nav>
 	</header>

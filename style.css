@@ -4,22 +4,24 @@ h1 {
 	font-family: 'Coda', cursive;
 	font-weight: 100;
 	font-size: 60pt;
+	color: rgba(255,255,255,0.7);
 }
 h2 {
 	font-family: 'Coda', cursive;
 	font-weight: 100;
 	font-size: 30pt;
-	color: #C0C0C0
+	color: #C0C0C0;
 }
 a {
 	text-align: right;
-	color: whitesmoke;
 	text-decoration: none;
 	padding: 10px;
+	color: white;
 }
 header {
-	background-color: #393939;
+	background-color: rgba(255,255,255,0.2);
 	padding: 5px;
+	top: 0;
 }
 nav {
 	text-align: right;
@@ -29,7 +31,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: whitesmoke;
 	background-color: #191919;
+	margin: 0;
+	padding: 0;
 }
 main {
 	padding: 0px 100px;
+}
+canvas {
+	background-color: lightsteelblue;
+	position: absolute;
 }
