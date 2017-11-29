@@ -1,6 +1,6 @@
 var c, ctx, w, h;
 var r0, dr, cx, cy, i, j, incr;
-var dark, light;
+var lightA, lightB, darkA, darkB, dc;
 var resizeTimer;
 
 function init() {
@@ -14,8 +14,11 @@ function init() {
   dr = r0 * 0.1;
   cx = w/2;
   cy = h/2;
-  light = "darkturquoise";
-  dark = "indigo";
+  lightA = "darkturquoise";
+  darkA = "indigo";
+  lightB = "mediumseagreen";
+  darkB = "midnightblue";
+  dc = 0;
   i = 0;
   j = Math.PI;
   incr = Math.PI / 2000;
@@ -38,10 +41,10 @@ function resize() {
   }, 100);
 }
 
-function setGrad(x1, y1, x2, y2) {
+function setGrad(x1, y1, x2, y2, dc) {
   var grd=ctx.createLinearGradient(x1,y1,x2,y2);
-  grd.addColorStop(0,light);
-  grd.addColorStop(1,dark);
+  grd.addColorStop(0,lightA);
+  grd.addColorStop(1,darkA);
   ctx.fillStyle=grd;
   ctx.fillRect(0,0,w,h);
 }
@@ -61,6 +64,7 @@ function tick() {
 
   i += incr;
   j += incr;
+  dc += incr;
 
   requestAnimationFrame(tick);
 }
