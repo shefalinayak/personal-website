@@ -10,7 +10,9 @@
   "dependencies": {
     "gatsby": "^1.9.273",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-typography": "^1.7.19",
-    "typography-theme-fairy-gates": "^0.15.11"
+    "glamorous": "^4.13.1",
+    "typography-theme-kirkham": "^0.16.3"
   }
 }
