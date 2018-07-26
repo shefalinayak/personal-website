@@ -10,23 +10,22 @@ export default ({ data }) => {
     <Layout>
       <div>
         <Link
-          to="/blog/"
+          to="/projects/"
           css={{ textDecoration: `none`, color: `inherit` }}
         >
-          <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
+          <g.H1 display={"inline-block"}>
             Projects
           </g.H1>
         </Link>
-        <h4>{data.allJavascriptFrontmatter.totalCount} Projects</h4>
-        {data.allJavascriptFrontmatter.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
-              to={node.node.name}
+              to={node.fields.slug}
               css={{ textDecoration: `none`, color: `inherit` }}
               >
               <g.H3 marginBottom={rhythm(1 / 4)}>
                 {node.frontmatter.title}{" "}
-                <g.Span color="#BBB">— {node.node.mtime}</g.Span>
+                <g.Span color="#BBB">— {node.frontmatter.when}</g.Span>
               </g.H3>
               <p>
                 {node.frontmatter.description}
@@ -40,19 +39,23 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query ProjQuery {
-    allJavascriptFrontmatter {
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { publish: {eq: true} } }
+    ) {
       totalCount
       edges {
         node {
-          node {
-            name
-            mtime(formatString: "DD MMMM, YYYY")
-          }
           id
           frontmatter {
             title
+            date(formatString: "DD MMMM, YYYY")
             description
+            when
+          }
+          fields {
+            slug
           }
         }
       }

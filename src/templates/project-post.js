@@ -8,14 +8,6 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Link
-          to="/blog/"
-          css={{ textDecoration: `none`, color: `inherit` }}
-        >
-          <g.H4 display={"inline-block"} borderBottom={"1px solid"}>
-            When Things Are Mad
-          </g.H4>
-        </Link>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
