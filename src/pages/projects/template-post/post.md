@@ -1,6 +1,6 @@
 ---
-title: Template Post For Blog
-description: "Doesn't Exist"
+title: Template Project Post
+description: "This is a template post"
 date: "2000-01-01"
 when: "Never Ever"
 publish: true

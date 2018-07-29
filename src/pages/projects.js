@@ -39,26 +39,27 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { publish: {eq: true} } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            description
-            when
-          }
-          fields {
-            slug
-          }
+query ProjectIndexQuery {
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date]},
+    filter: {
+      fileAbsolutePath: {regex: "/(projects)/.*\\.md$/"},
+      frontmatter: {publish: {eq: true}}
+    }
+  ) {
+    edges {
+      node {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          when
+          description
         }
       }
     }
   }
+}
 `;
