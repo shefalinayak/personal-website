@@ -1,7 +1,9 @@
 import React from "react";
 import g from "glamorous";
 import Link from "gatsby-link";
-import Layout from "../components/layout"
+import Layout from "../components/layout";
+import Container from "../components/container";
+import Img from 'gatsby-image'
 import { rhythm } from "../utils/typography";
 
 export default ({ data }) => {
@@ -17,22 +19,35 @@ export default ({ data }) => {
             Projects
           </g.H1>
         </Link>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={{ textDecoration: `none`, color: `inherit` }}
-              >
-              <g.H3 marginBottom={rhythm(1 / 4)}>
-                {node.frontmatter.title}{" "}
-                <g.Span color="#BBB">— {node.frontmatter.when}</g.Span>
-              </g.H3>
-              <p>
-                {node.frontmatter.description}
-              </p>
-            </Link>
-          </div>
-        ))}
+        <Container>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} style={{position: "relative"}}>
+              <Link
+                to={node.fields.slug}
+                css={{ textDecoration: `none`, color: `inherit` }}
+                >
+                <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+                <div style={{
+                    backgroundColor: "rgba(255,255,255,0.75)",
+                    position: "absolute",
+                    padding: "20px",
+                    width: "100%",
+                    top: "0px",
+                    left: "0px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis"
+                  }}>
+                  <g.H4 marginBottom={rhythm(1 / 4)}>
+                    {node.frontmatter.title}
+                  </g.H4>
+                  <g.H5 marginBottom={rhythm(1 / 4)}>
+                    {node.frontmatter.when}
+                  </g.H5>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </Container>
       </div>
     </Layout>
   );
@@ -57,6 +72,13 @@ query ProjectIndexQuery {
           title
           when
           description
+          featuredImage {
+            childImageSharp {
+              sizes( maxWidth: 600 ) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }

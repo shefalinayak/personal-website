@@ -1,6 +1,7 @@
 ---
 title: 'A Storytelling System'
 description: 'An IoT network of pillows to enhance the group storytelling experience'
+featuredImage: "./media/icon.png"
 date: "2018-05-01"
 when: 'Spring 2018'
 publish: true

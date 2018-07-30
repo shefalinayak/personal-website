@@ -1,6 +1,7 @@
 ---
 title: Talk Less Smile More
 description: "Graphics for a podcast about mental health"
+featuredImage: "./media/icon.png"
 date: "2000-01-01"
 when: "ummm"
 publish: true

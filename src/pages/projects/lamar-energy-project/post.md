@@ -1,6 +1,7 @@
 ---
 title: 'Lamar Energy Project'
 description: 'Website design to explain renewable energy efforts at Yellowstone National Park'
+featuredImage: "./media/icon.png"
 date: "2016-08-01"
 when: 'Summer 2016'
 publish: true
