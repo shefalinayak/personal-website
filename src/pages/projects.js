@@ -37,12 +37,12 @@ export default ({ data }) => {
                     overflow: "hidden",
                     textOverflow: "ellipsis"
                   }}>
-                  <g.H4 marginBottom={rhythm(1 / 4)}>
+                  <g.H3 marginBottom={rhythm(1 / 64)}>
                     {node.frontmatter.title}
-                  </g.H4>
-                  <g.H5 marginBottom={rhythm(1 / 4)}>
+                  </g.H3>
+                  <g.P marginBottom={rhythm(1 / 16)}>
                     {node.frontmatter.when}
-                  </g.H5>
+                  </g.P>
                 </div>
               </Link>
             </div>
