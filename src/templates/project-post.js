@@ -1,7 +1,7 @@
 import React from "react";
 import g from "glamorous";
 import Link from "gatsby-link";
-import Layout from "../components/layout"
+import Layout from "../components/nav-layout"
 
 export default ({ data }) => {
   const post = data.markdownRemark;
