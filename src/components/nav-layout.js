@@ -1,145 +1,91 @@
 import React from "react";
-import styles from "../components/nav-layout.js"
+import Link from "gatsby-link";
 
-console.log(styles);
-
-const Pentomino = props =>
-  <a href={props.url} style={{outline: "none"}}>
-    <polygon id={props.id} points={props.points} fill={props.fill}/>
-  </a>
+var colors = [
+  "#a5c4d4",
+  "#99b4c7",
+  "#8499b1",
+  "#828da7",
+  "#7d7997",
+  "#7b6d8d",
+  "#6f5c7d",
+  "#624c6e",
+  "#593f62"
+];
 
 const Navigation = props =>
-<div style={{
-  gridColumn: "2 / 3",
-  gridRow: "1 / 3"
-}}>
-  <svg xmlns="http://www.w3.org/20/svg" viewBox="0 0 5 12">
-    <Pentomino
-      fill="#d9e021"
-      id="pent-i"
-      points="0 0 0 1 5 1 5 0 0 0"
-      url=""
-      tx="0"
-      ty="0"
-      text="i"
-    />
-    <Pentomino
-      fill="#8cc63f"
-      id="pent-v"
-      points="0 1 0 4 1 4 1 2 3 2 3 1 0 1"
-      url=""
-      tx="0"
-      ty="1"
-      text="v"
-    />
-    <Pentomino
-      fill="#39b54a"
-      id="pent-t"
-      points="1 2 1 3 3 3 3 4 4 4 4 1 3 1 3 2 1 2"
-      url=""
-      tx="1"
-      ty="2"
-      text="t"
-    />
-    <Pentomino
-      fill="#009245"
-      id="pent-l"
-      points="4 1 4 4 3 4 3 5 5 5 5 1 4 1"
-      url=""
-      tx="4"
-      ty="1"
-      text="l"
-    />
-    <Pentomino
-      fill="#d9e021"
-      id="pent-w"
-      points="3 3 1 3 1 4 0 4 0 6 1 6 1 5 2 5 2 4 3 4 3 3"
-      url=""
-      tx="3"
-      ty="3"
-      text="w"
-    />
-    <Pentomino
-      fill="#8cc63f"
-      id="pent-x"
-      points="2 4 2 5 1 5 1 6 2 6 2 7 3 7 3 6 4 6 4 5 3 5 3 4 2 4"
-      url=""
-      tx="2"
-      ty="4"
-      text="x"
-    />
-    <Pentomino
-      fill="#39b54a"
-      id="pent-s"
-      points="0 6 0 9 1 9 1 10 2 10 2 8 1 8 1 6 0 6"
-      url=""
-      tx="0"
-      ty="6"
-      text="s"
-    />
-    <Pentomino
-      fill="#009245"
-      id="pent-z"
-      points="1 6 1 8 3 8 3 9 4 9 4 7 2 7 2 6 1 6"
-      url=""
-      tx="1"
-      ty="6"
-      text="z"
-    />
-    <Pentomino
-      fill="#d9e021"
-      id="pent-u"
-      points="2 10 2 12 5 12 5 10 4 10 4 11 3 11 3 10 2 10"
-      url=""
-      tx="2"
-      ty="10"
-      text="u"
-    />
-    <Pentomino
-      fill="#8cc63f"
-      id="pent-f"
-      points="2 8 2 10 3 10 3 11 4 11 4 10 5 10 5 9 3 9 3 8 2 8"
-      url=""
-      tx="2"
-      ty="8"
-      text="f"
-    />
-    <Pentomino
-      fill="#39b54a"
-      id="pent-y"
-      points="4 5 4 6 3 6 3 7 4 7 4 9 5 9 5 5 4 5"
-      url="lamar"
-      tx="4"
-      ty="5"
-      text="y"
-    />
-    <Pentomino
-      fill="#009245"
-      id="pent-p"
-      points="0 9 0 12 2 12 2 10 1 10 1 9 0 9"
-      url=""
-      tx="0"
-      ty="9"
-      text="p"
-    />
- </svg>
-</div>
+  <div style={{
+      height: "100%",
+      position: "fixed",
+      top: "0px",
+      right: "0px"}}
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1080" height="100%" width="100%">
+      <title>sidebar navigation</title>
+      <g>
+        <polygon id="pent-c"
+          points="191 179 223 176 214 75 214 75 214 75 280 69 315 66 315 66 315 66 324 167 360 164 360 0 105 0 122 185 191 179"
+          style={{fill: colors[0], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-x"
+          points="315 66 315 66 280 69 214 75 214 75 223 176 223 176 191 179 122 185 131 286 232 277 241 378 342 369 333 268 360 266 360 164 324 167 315 66"
+          style={{fill: colors[1], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-i"
+          points="48 498 48 498 149 489 135 327 122 185 105 0 4 0 48 498 48 498"
+          style={{fill: colors[2], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-f"
+          points="250 479 351 470 342 369 241 378 232 277 131 286 135 327 149 489 48 498 48 498 57 599 259 581 250 479"
+          style={{fill: colors[3], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-y"
+          points="351 470 250 479 259 581 259 581 360 572 360 266 333 268 351 470"
+          style={{fill: colors[4], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-t"
+          points="259 581 57 599 66 700 167 691 185 893 286 884 268 682 360 673 360 572 259 581 259 581"
+          style={{fill: colors[5], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-p"
+          points="286 884 360 877 360 673 268 682 286 884"
+          style={{fill: colors[6], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-l"
+          points="194 994 185 893 167 691 66 700 100 1080 304 1080 295 985 194 994"
+          style={{fill: colors[7], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+        <polygon id="pent-z"
+          points="185 893 194 994 295 985 304 1080 360 1080 360 877 286 884 185 893"
+          style={{fill: colors[8], stroke: "#fff", strokeMiterLimit: "10", strokeWidth: "2px"}}/>
+      </g>
+      <text transform="translate(29 186) rotate(-5)" style={{
+          fontSize: "60px",
+          fill: "#312336",
+          fontFamily: "Lato-Bold, Lato",
+          fontWeight: "700"}}
+          >
+          <Link to="/">
+            <tspan>HOME</tspan>
+          </Link>
+          <Link to="/projects/">
+            <tspan x="0" y="101">PROJECTS</tspan>
+          </Link>
+          <Link to="/about/">
+            <tspan x="0" y="202">ABOUT</tspan>
+          </Link>
+          <Link to="/blog/">
+            <tspan x="0" y="303">BLOG</tspan>
+          </Link>
+      </text>
+    </svg>
+  </div>
 
 
 export default ({ children }) =>
   <div style={{
     display: "grid",
-    gridTemplateColumns: "1fr 41.67vh",
-    gridTemplateRows: "1fr 30px",
-    height: "100%",
-    width: "100%",
-    overflow: "hidden"
+    gridTemplateColumns: "6.6667vh 1fr 33.33vh",
+    gridTemplateRows: "6.6667vh minmax(300px,1fr) 6.6667vh",
+    height: "100vh",
+    background: "white",
   }}>
     <div style={{
-      gridColumn: "1 / 2",
-      gridRow: "1 / 3",
-      background: "whitesmoke",
-      overflow: "scroll"
+      gridColumn: "2 / 3",
+      gridRow: "2 / 3",
+      background: "white"
     }}>
       { children }
     </div>

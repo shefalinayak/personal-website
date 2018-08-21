@@ -6,9 +6,9 @@ const typography = new Typography({
   scaleRatio: 4,
   googleFonts: [
     {
-      name: 'Ramaraja',
+      name: 'Lato',
       styles: [
-        '400',
+        '700',
       ],
     },
     {
@@ -22,11 +22,16 @@ const typography = new Typography({
     }
   ],
   headerFontFamily: [
-    "Ramaraja",
+    "Lato",
     "sans-serif",
   ],
   bodyFontFamily: ["Open Sans", "sans-serif"],
-  headerWeight: 400,
+  headerWeight: 700,
+  overrideThemeStyles: ({ rhythm }, options, styles) => ({
+    'h1': {
+      color: '312336'
+    }
+  })
 });
 
 export default typography;

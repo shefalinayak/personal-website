@@ -5,7 +5,7 @@ export default ({ data }) =>
   <Layout>
     <div>
       <h1>
-        Hello hello.
+        About
       </h1>
       <p>
         A brief description of who I am and what I make, and how to reach me.
