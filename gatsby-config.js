@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Shefali Nayak`,
+    favicon: `src/favicon_large.png`
   },
   plugins: [
     `gatsby-transformer-javascript-frontmatter`,
@@ -18,6 +19,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              linkImagesToOriginal: false,
+              showCaptions: true,
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.

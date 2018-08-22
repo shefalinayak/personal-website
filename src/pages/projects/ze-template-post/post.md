@@ -4,7 +4,7 @@ description: "This is a template post"
 featuredImage: "./media/icon.png"
 date: "2000-01-01"
 when: "Never Ever"
-publish: true
+publish: false
 ---
 
 # Heading 1

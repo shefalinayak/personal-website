@@ -2,10 +2,10 @@ import React from "react";
 import g from "glamorous";
 import Link from "gatsby-link";
 import Layout from "../components/nav-layout";
-import Container from "../components/container";
 import Img from 'gatsby-image';
 import { rhythm } from "../utils/typography";
 import ProjectBox from "../components/project-box";
+import styles from "./projects.module.css";
 
 export default ({ data }) => {
   console.log(data);
@@ -20,7 +20,7 @@ export default ({ data }) => {
             Projects
           </g.H1>
         </Link>
-        <Container>
+        <div className={styles.container}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <ProjectBox
               nodeid={node.id}
@@ -30,7 +30,7 @@ export default ({ data }) => {
               when={node.frontmatter.when}
             />
           ))}
-        </Container>
+        </div>
       </div>
     </Layout>
   );
