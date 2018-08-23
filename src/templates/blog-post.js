@@ -9,14 +9,14 @@ export default ({ data }) => {
     <Layout>
       <div>
         <Link
-          to="/projects/"
+          to="/blog/"
           css={{ textDecoration: `none`, color: `inherit` }}
         >
           <g.H4 display={"inline-block"}>
-            projects
+            when things are mad
           </g.H4>
         </Link>
-        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -24,7 +24,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query ProjPostQuery($slug: String!) {
+  query BlogPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import styles from "./nav-layout.module.css";
 
 var colors = [
   "#a5c4d4",
@@ -77,15 +78,15 @@ const Navigation = props =>
 export default ({ children }) =>
   <div style={{
     display: "grid",
-    gridTemplateColumns: "6.6667vh 1fr 33.33vh",
+    gridTemplateColumns: "6.6667vh 1fr 40vh",
     gridTemplateRows: "6.6667vh minmax(300px,1fr) 6.6667vh",
     height: "100vh",
     background: "white",
   }}>
-    <div style={{
+    <div className={styles.content} style={{
       gridColumn: "2 / 3",
       gridRow: "2 / 3",
-      background: "white"
+      background: "white",
     }}>
       { children }
     </div>

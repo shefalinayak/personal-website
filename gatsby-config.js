@@ -4,7 +4,6 @@ module.exports = {
     favicon: `src/favicon_large.png`
   },
   plugins: [
-    `gatsby-transformer-javascript-frontmatter`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,14 +42,15 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-glamor`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-glamor`,
+    `gatsby-transformer-javascript-frontmatter`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`
   ],
 };

@@ -13,9 +13,9 @@ export default ({ data }) => {
           to="/blog/"
           css={{ textDecoration: `none`, color: `inherit` }}
         >
-          <g.H1 display={"inline-block"}>
-            When Things Are Mad
-          </g.H1>
+          <g.H4 display={"inline-block"}>
+            when things are mad
+          </g.H4>
         </Link>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>

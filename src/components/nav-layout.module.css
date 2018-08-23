@@ -1,0 +1,8 @@
+.content p > a {
+  background-color: #e1e9f2;
+  color: black;
+}
+
+.content p > a:hover {
+  background-color: #c3d3e6;
+}
