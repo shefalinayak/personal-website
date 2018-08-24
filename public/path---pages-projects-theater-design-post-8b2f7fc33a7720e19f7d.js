@@ -1,2 +1,0 @@
-webpackJsonp([82068860432544],{378:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Theater Design"}}},pathContext:{slug:"/pages/projects/theater-design/post/"}}}});
-//# sourceMappingURL=path---pages-projects-theater-design-post-8b2f7fc33a7720e19f7d.js.map

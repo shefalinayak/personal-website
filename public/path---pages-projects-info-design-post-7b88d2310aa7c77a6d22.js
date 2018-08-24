@@ -1,2 +1,0 @@
-webpackJsonp([0xda72752fe21c],{374:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Information Design"}}},pathContext:{slug:"/pages/projects/info-design/post/"}}}});
-//# sourceMappingURL=path---pages-projects-info-design-post-7b88d2310aa7c77a6d22.js.map
