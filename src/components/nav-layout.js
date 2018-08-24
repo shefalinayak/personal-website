@@ -15,14 +15,12 @@ var colors = [
 ];
 
 const Navigation = props =>
-  <div style={{
-      height: "100%",
-      position: "fixed",
-      top: "0px",
-      right: "0px"}}
-    >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1080" height="100%" width="100%">
-      <title>sidebar navigation</title>
+  <div className={styles.main}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 360 1080"
+      height="100%" width="100%"
+      >
       <g>
         <polygon id="pent-c"
           points="191 179 223 176 214 75 214 75 214 75 280 69 315 66 315 66 315 66 324 167 360 164 360 0 105 0 122 185 191 179"
@@ -76,19 +74,19 @@ const Navigation = props =>
 
 
 export default ({ children }) =>
-  <div style={{
+<div style={{
     display: "grid",
-    gridTemplateColumns: "6.6667vh 1fr 40vh",
-    gridTemplateRows: "6.6667vh minmax(300px,1fr) 6.6667vh",
+    gridTemplateColumns: "6vh 1fr 40vh",
+    gridTemplateRows: "6vh minmax(300px,1fr) 6vh",
     height: "100vh",
     background: "white",
   }}>
-    <div className={styles.content} style={{
+  <div className={styles.content} style={{
       gridColumn: "2 / 3",
       gridRow: "2 / 3",
       background: "white",
     }}>
-      { children }
-    </div>
-    <Navigation />
+    { children }
+  </div>
+  <Navigation />
 </div>

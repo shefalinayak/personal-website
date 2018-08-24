@@ -16,17 +16,17 @@ export default ( props ) => (
       </div>
       <div className={styles.label}>
         <div>
-              <g.H3 marginBottom={rhythm(1 / 64)}>
-                {props.title}
-              </g.H3>
-              <g.P marginBottom={rhythm(1 / 16)}>
-                {props.when}
-              </g.P>
+          <g.H3 marginBottom={rhythm(1 / 64)} style={{color: "white"}}>
+            {props.title}
+          </g.H3>
+          <g.P marginBottom={rhythm(1 / 16)} style={{color: "white"}}>
+            {props.when}
+          </g.P>
         </div>
       </div>
     </Link>
-    </div>
-  );
+  </div>
+);
 
 
 // <div key={node.id} style={{position: "relative"}}>

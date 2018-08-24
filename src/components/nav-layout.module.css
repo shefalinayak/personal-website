@@ -1,3 +1,23 @@
+.main {
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+.main > svg {
+  width: 33.33vh;
+}
+
+.content p {
+  color: black;
+}
+
+.content a {
+  text-decoration: none;
+  color: #99b4c7;
+}
+
 .content p > a {
   background-color: #e1e9f2;
   color: black;

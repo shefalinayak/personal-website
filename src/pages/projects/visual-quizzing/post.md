@@ -7,7 +7,7 @@ date: "2017-12-01"
 publish: true
 ---
 
-## [Link to the project demo](http://shefalinayak.com/visualquizzing/app/)
+## [Link to the project demo](https://shefalinayak.github.io/visualquizzing/app/)
 
 Visual Quizzing is a new approach to online quizzing modules used by the Princeton Computer Science Department. The questions are from a course about algorithms and data structures. The existing question format is largely text-based and not particularly intuitive, often leading to unnecessary errors, especially since there isn't a good way to discuss these questions online.
 

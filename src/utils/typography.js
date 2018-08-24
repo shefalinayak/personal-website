@@ -29,7 +29,7 @@ const typography = new Typography({
   headerWeight: 700,
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     'h1,h2,h3': {
-      color: '312336'
+      color: '#312336'
     }
   })
 });

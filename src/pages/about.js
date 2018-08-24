@@ -21,7 +21,7 @@ export default ({ data }) =>
       <p>
         The best way to reach me is via email, at <a href={"mail" + "to:" + username + "@" + hostname + ".com"}>{username + "@" + hostname + ".com"}</a>.
       </p>
-      <a href="https://github.com/shefalinayak">
+      <a href="https://github.com/shefalinayak/">
         <img src={githubLogo} alt="github" height="50px"
           style={{margin: "0px 15px 0px 0px"}}/>
       </a>
