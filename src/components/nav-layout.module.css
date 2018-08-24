@@ -1,12 +1,37 @@
-.main {
+.mainSide {
+  display: grid;
+  grid-template-columns: 6vh 1fr 40vh;
+  grid-template-rows: 6vh minmax(300px,1fr) 6vh;
+  height: 100vh;
+}
+
+.navSide {
   height: 100vh;
   position: fixed;
   top: 0px;
   right: 0px;
 }
 
-.main > svg {
+.navSide > svg {
   width: 33.33vh;
+}
+
+.mainTop {
+  display: grid;
+  grid-template-columns: 6vh 1fr 6vh;
+  grid-template-rows: 33vw minmax(300px,1fr) 6vh;
+  height: 100vh;
+}
+
+.navTop {
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.navTop > svg {
+  width: 100vw;
 }
 
 .content p {

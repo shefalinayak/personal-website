@@ -22,9 +22,9 @@ export default () => (
         position: "absolute",
         zindex: "2",
         bottom: "15%",
-        left: "6.67%",
+        left: "6%",
       }}>
-      <h1 style={{fontSize: "10vw"}}>Shefali Nayak</h1>
+      <h1 style={{fontSize: "10vw", color: "rgba(0,0,0,0.7)"}}>Shefali Nayak</h1>
     </div>
   </Layout>
 );
