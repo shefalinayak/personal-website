@@ -16,6 +16,9 @@ export default ({ data }) =>
         I'm a creative coder, and more generally a maker of things combining arts and tech. I love working on projects that deal with education or storytelling (or both!). Most of my recent tech tinkering has been at the <a href="https://cst.princeton.edu/studiolab">StudioLab</a> at Princeton University.
       </p>
       <p>
+        I designed and coded this website myself. If you want to look at the source code, you can find it in the <a href="https://github.com/shefalinayak/personal-website">github repo</a>.
+      </p>
+      <p>
         In my downtime I make things with paper and ink, which you can find on my <a href="https://www.instagram.com/shefferstroke/">instagram</a>.
       </p>
       <p>
