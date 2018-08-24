@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: `Shefali Nayak`,
     favicon: `src/favicon_large.png`,
-    baseurl: `/`
   },
   plugins: [
     {
