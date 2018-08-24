@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography";
 export default () => (
   <Layout>
     <iframe
-      src="http://alpha.editor.p5js.org/embed/B1SkH_CHQ"
+      src="https://alpha.editor.p5js.org/embed/B1SkH_CHQ"
       frameBorder="0"
       width="100%"
       height="100%"
