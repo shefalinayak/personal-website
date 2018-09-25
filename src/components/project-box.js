@@ -1,6 +1,6 @@
 import React from "react";
 import g from "glamorous";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import Img from 'gatsby-image';
 import Media from 'react-media';
 import { rhythm } from "../utils/typography";
@@ -13,7 +13,7 @@ export default ( props ) => (
       css={{ textDecoration: `none`, color: `white` }}
       >
       <div className={styles.image}>
-        <Img sizes={props.imgsizes} />
+        <Img fluid={props.imgfluid} />
       </div>
       <Media query="(hover: none)">
         {matches =>

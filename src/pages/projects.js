@@ -1,9 +1,7 @@
 import React from "react";
 import g from "glamorous";
-import Link from "gatsby-link";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/nav-layout";
-import Img from 'gatsby-image';
-import { rhythm } from "../utils/typography";
 import ProjectBox from "../components/project-box";
 import styles from "./projects.module.css";
 
@@ -25,7 +23,7 @@ export default ({ data }) => {
             <ProjectBox
               nodeid={node.id}
               pagelink={node.fields.slug}
-              imgsizes={node.frontmatter.featuredImage.childImageSharp.sizes}
+              imgfluid={node.frontmatter.featuredImage.childImageSharp.fluid}
               title={node.frontmatter.title}
               when={node.frontmatter.when}
             />
@@ -41,7 +39,7 @@ query ProjectIndexQuery {
   allMarkdownRemark(
     sort: { order: DESC, fields: [frontmatter___date]},
     filter: {
-      fileAbsolutePath: {regex: "/(projects)/.*\\.md$/"},
+      fileAbsolutePath: {regex: "/(projects)/.*.md$/"},
       frontmatter: {publish: {eq: true}}
     }
   ) {
@@ -57,8 +55,8 @@ query ProjectIndexQuery {
           description
           featuredImage {
             childImageSharp {
-              sizes( maxWidth: 600 ) {
-                ...GatsbyImageSharpSizes
+              fluid( maxWidth: 600 ) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

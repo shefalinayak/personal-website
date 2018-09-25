@@ -22,7 +22,7 @@ export default ({ data }) =>
         In my downtime I make things with paper and ink, which you can find on my <a href="https://www.instagram.com/shefferstroke/">instagram</a>.
       </p>
       <p>
-        The best way to reach me is via email, at <a href={"mail" + "to:" + username + "@" + hostname + ".com"}>{username + "@" + hostname + ".com"}</a>.
+        The best way to reach me is via email, at <a href={"mailto:" + username + "@" + hostname + ".com"}>{username + "@" + hostname + ".com"}</a>.
       </p>
       <a href="https://github.com/shefalinayak/">
         <img src={githubLogo} alt="github" height="50px"

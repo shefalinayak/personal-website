@@ -1,6 +1,6 @@
 import React from "react";
 import g from "glamorous";
-import Link from "gatsby-link";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/nav-layout"
 import { rhythm } from "../utils/typography";
 
@@ -43,7 +43,7 @@ query BlogIndexQuery {
   allMarkdownRemark(
     sort: { order: DESC, fields: [frontmatter___date]},
     filter: {
-      fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"},
+      fileAbsolutePath: {regex: "/(blog)/.*.md$/"},
       frontmatter: {publish: {eq: true}}
     }
   ) {

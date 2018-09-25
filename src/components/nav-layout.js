@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import Link from "gatsby-link";
+import React from "react";
+import { Link } from "gatsby";
 import Media from "react-media";
 import styles from "./nav-layout.module.css";
 

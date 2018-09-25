@@ -1,6 +1,6 @@
 import React from "react";
 import g from "glamorous";
-import Link from "gatsby-link";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/nav-layout"
 
 export default ({ data }) => {
