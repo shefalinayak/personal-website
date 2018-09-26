@@ -1,5 +1,5 @@
 ---
-title: Assorted Collabs
+title: Assorted Contributions
 description: "helping other people with their projects"
 featuredImage: "./media/profile.png"
 date: "2017-01-01"
