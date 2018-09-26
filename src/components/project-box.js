@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography";
 import styles from "./project-box.module.css";
 
 export default ( props ) => (
-  <div key={props.key} style={{position: "relative"}}>
+  <div key={props.nodeid} style={{position: "relative"}}>
     <Link
       to={props.pagelink}
       css={{ textDecoration: `none`, color: `white` }}

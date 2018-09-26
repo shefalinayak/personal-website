@@ -9,7 +9,9 @@ publish: true
 
 This project was an independent study I did during my senior year at Princeton. I've always loved storytelling and I wanted to make something that enhanced the group experience of it. The piece consists of pillows that listeners can squeeze when they feel excited or want to react to something in the story. The pillows trigger vibrations and rustling on a centerpiece that acts something like a smart indoor fireplace.
 
-![setup process](./media/symposium.gif)
+Early stages of the project were taken to Mercer Bucks Mini Maker Faire in Pennington and to the Living at the Intersection Symposium at Princeton University.
+
+![symposium demo](./media/symposium.gif)
 
 ## Concept
 
