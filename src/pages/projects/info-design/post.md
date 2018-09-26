@@ -25,7 +25,6 @@ This was created for a class project. The goal is to describe Princeton Universi
 
 ![princeton guide](./media/princeton.jpg)
 
-
 ## Graphic Design
 
 ### Podcast artwork
