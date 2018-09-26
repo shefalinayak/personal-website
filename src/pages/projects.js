@@ -17,6 +17,9 @@ export default ({ data }) => {
           <g.H1 display={"inline-block"}>
             Projects
           </g.H1>
+          <g.P>
+            Here are some of my past projects. Take a look at my <Link to="/blog/">blog</Link> for some tidbits and experiments, or <a href="https://www.instagram.com/shefferstroke/">instagram</a> for the artsy-crafty things.
+          </g.P>
         </Link>
         <div className={styles.container}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
